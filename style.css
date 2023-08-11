@@ -1,0 +1,112 @@
+header nav.navbar {
+    padding: 1rem 0;
+}
+
+header .navbar-collapse {
+    justify-content: end;
+}
+
+
+.header-wrap button.search {
+    appearance: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+}
+
+.header-wrap button.search i {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.banner {
+    padding: 200px 0 250px;
+}
+
+.banner .background {
+    border-radius: 0 0 0 291px;
+}
+
+.content-wrap {
+    min-height: 350px;
+}
+
+.banner-button {
+    margin-top: 50px;
+}
+
+.header-wrap nav ul.navbar-nav ul {
+    position: absolute;
+    margin: 0;
+    list-style: none;
+    padding: 10px 20px;
+    box-shadow: 3px 10px 15px 4px rgba(0, 0, 0, .2);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease;
+    z-index: 9;
+    background-color: #fff;
+}
+
+.header-wrap nav ul.navbar-nav li:hover ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-wrap nav ul.navbar-nav li {
+    position: relative;
+}
+
+.header-wrap form {
+    display: none !important;
+}
+
+header ul a.nav-link {
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+footer {
+    font-size: 0.875rem;
+}
+
+.footer-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-contacts p span {
+    display: block;
+    line-height: 1;
+}
+
+.social-icons {
+    display: flex;
+    column-gap: 20px;
+}
+
+.social-icons a {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .logo {
+    margin-bottom: 22px;
+}
