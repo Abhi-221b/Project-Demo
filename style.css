@@ -131,6 +131,7 @@ body.show-form .form-popup .form-search {
     transition: all 0.3s ease-in;
     visibility: hidden;
     opacity: 0;
+    z-index: 9999;
 }
 
 body.show-form,
