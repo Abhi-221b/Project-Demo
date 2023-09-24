@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your E-commerce Website</title>
+    <title>Demo Project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -13,27 +13,28 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="slick.css">
+    <link rel="stylesheet" href="slick-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="slick.min.js"></script>
+    <script src="main.js" defer></script>
 
 </head>
 
-<body>
+<body class="">
     <header>
         <div class="header-space">
 
         </div>
         <div class="header-wrap">
             <div class="page-center">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <nav class="navbar">
                     <div class="container-fluid px-0">
                         <a class="navbar-brand" href="#">
                             <img src="./images/Logo.svg" alt="Logo">
                         </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <div class="menu desktop">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="#">Home</a>
@@ -62,12 +63,59 @@
                                     <a class="nav-link">Contact</a>
                                 </li>
                             </ul>
-                            <form class="d-flex align-items-center" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            </form>
+                        </div>
+                        <div class="menu mobile">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Pages</a>
+                                </li>
+                                <li class="nav-item has-children">
+                                    <a class="nav-link" href="#">
+                                        Services
+                                    </a>
+                                    <ul>
+                                        <li><a class="nav-item" href="#">Action</a></li>
+                                        <li><a class="nav-item" href="#">Another action</a></li>
+                                        <li><a class="nav-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">Project</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="search-wrap">
+                            <div class="form-search">
+                                <div class="form-search-wrap">
+
+                                    <form class="d-flex align-items-center" role="search">
+                                        <input class="form-control me-2" type="search" placeholder="Search"
+                                            aria-label="Search">
+                                        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                                    </form>
+
+                                </div>
+                                <div class="overlay"></div>
+
+                            </div>
                             <button class="btn btn-outline-success search" type="submit"><i
                                     class="fas fa-search"></i></button>
                         </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </div>
                 </nav>
             </div>
@@ -88,7 +136,7 @@
                             passages.</p>
                     </div>
                     <div class="banner-button">
-                        <button>Get Started <span><i class="fa-solid fa-arrow-right"></i></span></button>
+                        <button class="popup">Get Started <span><i class="fa-solid fa-arrow-right"></i></span></button>
                     </div>
                 </div>
 
@@ -96,35 +144,405 @@
             </div>
         </section>
 
-        <section>
+        <section class="card-details my-5">
             <div class="page-center">
-                <h1>Section 1</h1>
-                <h2>Section 2</h2>
-                <h3>Section 3</h3>
-                <h4>Section 4</h4>
-                <h5>Section 5</h5>
-                <h6>Section 6</h6>
+
+                <div class="item-wrapper px-4 py-5">
+                    <div class="row">
+                        <div class="cards-items col-lg-4 py-3 text-center">
+                            <h5>Project Plan</h5>
+                            <p>There are many variations of the passages of lorem Ipsum from available, majority.</p>
+                            <a href=""><span class="read_more-btn">Read More <span class="arrow"></span></span></a>
+                        </div>
+                        <div class="cards-items col-lg-4 py-3 text-center">
+                            <h5>Interior Work</h5>
+                            <p>There are many variations of the passages of lorem Ipsum from available, majority.</p>
+                            <a href=""><span class="read_more-btn">Read More <span class="arrow"></span></span></a>
+                        </div>
+                        <div class="cards-items col-lg-4 py-3 text-center">
+                            <h5>Realization</h5>
+                            <p>There are many variations of the passages of lorem Ipsum from available, majority.</p>
+                            <a href=""><span class="read_more-btn">Read More <span class="arrow"></span></span></a>
+                        </div>
+                    </div>
+
+                </div>
+
+
                 <!-- Add content for Section 1 here -->
             </div>
         </section>
 
-        <section>
+        <section class="about_us my-5">
             <div class="page-center">
-                <h2>Section 3</h2>
+                <div class="about_us-wrap">
+                    <div class="about_us-content">
+                        <div class="about_us-title">
+                            <h2>
+                                We Create The Art
+                                Of Stylish Living
+                                Stylishly
+                            </h2>
+                            <p>
+                                It is a long established fact that a reader will be distracted by the of readable
+                                content of a page
+                                when lookings at its layouts the points of using
+                                that it has a more-or-less normal.
+                            </p>
+                        </div>
+                        <div class="contact clearfix">
+                            <img src="./images/Call Icon.svg" alt="">
+                            <p><strong>012345678</strong>Call Us Anytime</p>
+                        </div>
+                        <div class="button-wrap">
+                            <button class="popup"> Get Free Estimate <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="about_us-image">
+                        <img src="./images/Photo (1).png" alt="We Create The Art Of Stylish Living Stylishly">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial my-5">
+            <div class="page-center">
+                <div class="testimonial_wrap">
+                    <div class="testimonial-title text-center">
+                        <h2>
+                            What the People Thinks About Us
+                        </h2>
+                    </div>
+                    <div class="testimonial_items-wrap">
+                        <div class="row">
+                            <div class="testimonial_item col-4">
+                                <div class="author_desc">
+                                    <div class="img_wrap">
+                                        <img src="./images/Photo.jpg" alt="">
+                                    </div>
+                                    <div class="author_name">
+                                        <span class="name">
+                                            Nattasha Mith
+                                        </span>
+                                        <span class="author_addr">
+                                            Sydney, USA
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="author_comment">
+                                    <p>Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.</p>
+                                </div>
+                            </div>
+                            <div class="testimonial_item col-4">
+                                <div class="author_desc">
+                                    <div class="img_wrap">
+                                        <img src="./images/Photo (1).jpg" alt="">
+                                    </div>
+                                    <div class="author_name">
+                                        <span class="name">
+                                            Raymond Galario
+                                        </span>
+                                        <span class="author_addr">
+                                            Sydney, Australia
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="author_comment">
+                                    <p>Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.</p>
+                                </div>
+                            </div>
+                            <div class="testimonial_item col-4">
+                                <div class="author_desc">
+                                    <div class="img_wrap">
+                                        <img src="./images/Photo (2).jpg" alt="">
+                                    </div>
+                                    <div class="author_name">
+                                        <span class="name">
+                                            Benny Roll
+                                        </span>
+                                        <span class="author_title">
+                                            Sydney, New York
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="author_comment">
+                                    <p>Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="logo_slider my-5 py-5">
+            <div class="container">
+                <div class="logo-slider-wrap slider-wrap">
+                    <div class="item-wrap">
+                        <img src="./images/01.svg" alt="" loading="eager">
+                    </div>
+                    <div class="item-wrap">
+                        <img src="./images/02.svg" alt="" loading="eager">
+                    </div>
+                    <div class="item-wrap">
+                        <img src="./images/03.svg" alt="" loading="eager">
+                    </div>
+                    <div class="item-wrap">
+                        <img src="./images/04.svg" alt="" loading="eager">
+                    </div>
+                    <div class="item-wrap">
+                        <img src="./images/05.svg" alt="" loading="eager">
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="project_details my-5">
+            <div class="page-center">
+                <div class="project_details-title text-center container">
+                    <h2>
+                        Follow Our Projects
+                    </h2>
+                    <p>
+                        It is a long established fact that a reader will be distracted by the of readable content of
+                        page lookings at its layouts points.
+                    </p>
+                </div>
+                <div class="project_details-items_wrap px-4">
+                    <div class="row">
+                        <div class="project_details-item col-6">
+                            <div class="project_details-item_inner">
+                                <div class="item-image">
+                                    <img src="./images/Photo (2).png" alt="">
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-title">
+                                        <h5>Modern Kitchan</h5>
+                                        <p>Decor / Artchitecture</p>
+                                    </div>
+                                    <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
+                                            viewBox="0 0 70 70" fill="none">
+                                            <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
+                                            <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project_details-item col-6">
+                            <div class="project_details-item_inner">
+                                <div class="item-image">
+                                    <img src="./images/Photo (3).png" alt="">
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-title">
+                                        <h5>Modern Kitchan</h5>
+                                        <p>Decor / Artchitecture</p>
+                                    </div>
+                                    <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
+                                            viewBox="0 0 70 70" fill="none">
+                                            <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
+                                            <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project_details-item col-6">
+                            <div class="project_details-item_inner">
+                                <div class="item-image">
+                                    <img src="./images/Photo (4).png" alt="">
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-title">
+                                        <h5>Modern Kitchan</h5>
+                                        <p>Decor / Artchitecture</p>
+                                    </div>
+                                    <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
+                                            viewBox="0 0 70 70" fill="none">
+                                            <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
+                                            <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project_details-item col-6">
+                            <div class="project_details-item_inner">
+                                <div class="item-image">
+                                    <img src="./images/Photo (5).png" alt="">
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-title">
+                                        <h5>Modern Kitchan</h5>
+                                        <p>Decor / Artchitecture</p>
+                                    </div>
+                                    <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"
+                                            viewBox="0 0 70 70" fill="none">
+                                            <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
+                                            <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="counter my-5 py-5">
+            <div class="page-center">
+                <div class="counter-item_wrap">
+                    <div class="counter-item text-center">
+                        <h1 data-max='12' data-speed='3000'>12</h1>
+                        <p class="subtitle">Years Of Experiance</p>
+                    </div>
+                    <div class="counter-item text-center">
+                        <h1 data-max='85' data-speed='3000'>85</h1>
+                        <p class="subtitle">Success Project</p>
+                    </div>
+                    <div class="counter-item text-center">
+                        <h1 data-max='15' data-speed='3000'>15</h1>
+                        <p class="subtitle">Active Project</p>
+                    </div>
+                    <div class="counter-item text-center">
+                        <h1 data-max='95' data-speed='3000'>95</h1>
+                        <p class="subtitle">Happy CUstomers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section class="myblog my-5">
+            <div class="page-center">
+
+                <div class="myblog-title text-center">
+                    <h2>
+                        Articles & News
+                    </h2>
+                    <p>
+                        It is a long established fact that a reader will be distracted by the of readable content of a
+                        page when lookings at its layouts the points of using.
+                    </p>
+                </div>
+
+                <div class="post-items-wrap py-5 px-4">
+                    <div class="row">
+                        <div class="post-item-wrp col-lg-4">
+                            <div class="post-items">
+                                <div class="featured_img">
+                                    <img src="./images/blog1.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <h5>Let’s Get Solution For Building Construction Work</h5>
+                                </div>
+                                <div class="desc_wrap">
+                                    <div class="post_date">26 December,2022</div>
+                                    <div class="right_arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53"
+                                            viewBox="0 0 52 53" fill="none">
+                                            <circle cx="26" cy="26.2671" r="26" fill="#F4F0EC" />
+                                            <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-item-wrp col-lg-4">
+                            <div class="post-items">
+                                <div class="featured_img">
+                                    <img src="./images/blog2.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <h5>Low Cost Latest Invented Interior Designing Ideas.</h5>
+                                </div>
+                                <div class="desc_wrap">
+                                    <div class="post_date">26 December,2022</div>
+                                    <div class="right_arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53"
+                                            viewBox="0 0 52 53" fill="none">
+                                            <circle cx="26" cy="26.2671" r="26" fill="#F4F0EC" />
+                                            <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-item-wrp col-lg-4">
+                            <div class="post-items">
+                                <div class="featured_img">
+                                    <img src="./images/blog3.png" alt="">
+                                </div>
+                                <div class="title-wrap">
+                                    <h5>Best For Any Office & Business Interior Solution</h5>
+                                </div>
+                                <div class="desc_wrap">
+                                    <div class="post_date">26 December,2022</div>
+                                    <div class="right_arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53"
+                                            viewBox="0 0 52 53" fill="none">
+                                            <circle cx="26" cy="26.2671" r="26" fill="#F4F0EC" />
+                                            <path d="M23.771 32.9529L29.7139 26.2672L23.771 19.5815" stroke="#292F36"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
                 <!-- Add content for Section 1 here -->
             </div>
         </section>
 
-        <section>
+
+        <section class="bottom-pane my-5">
             <div class="page-center">
-                <h2>Section 4</h2>
-                <!-- Add content for Section 1 here -->
-            </div>
+                <div class="bottom-page-wrap">
+                    <div class="content-wrap text-center">
+                        <h2>Wanna join the interno?</h2>
+                        <p>It is a long established fact will be distracted.</p>
+                        <button class="popup">Contact With Us<span class='arrow'><i
+                                    class="fa-solid fa-arrow-right"></i></span></button>
+                    </div>
+                </div>
         </section>
 
-        <section>
-            <div class="page-center">
-                <h2>Section 5</h2>
+    </main>
+
+    <script>
+
+        $('.logo-slider-wrap').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            pauseOnHover: false,
+            dots: false,
+            arrows: false,
+            variableWidth: true
+        });
+    </script>
+
+    <div class="form-popup">
+        <div class="form-search">
+            <div class="form-search-wrap">
+
                 <div class="form">
                     <form action="#" method="post">
                         <!-- Text Input -->
@@ -229,22 +647,15 @@
                         </fieldset>
                     </form>
                 </div>
+                <div class="close"><i class="fa-solid fa-xmark"></i></div>
             </div>
-        </section>
 
+            <div class="overlay"></div>
 
-        <section class="bottom-pane">
-            <div class="page-center">
-                <div class="bottom-page-wrap">
-                    <div class="content-wrap">
-                        h
-                    </div>
-                </div>
-        </section>
+        </div>
+    </div>
 
-    </main>
-
-    <footer class="bg-light py-4">
+    <footer class="bg-light px-4 py-4">
 
         <div class="page-center">
             <div class="row pb-5 pt-3">

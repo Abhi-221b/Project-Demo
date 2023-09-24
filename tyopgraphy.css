@@ -99,6 +99,9 @@ form select,
 form textarea {
     display: inline-block;
     width: 100%;
+    font-size: 0.875rem;
+    line-height: 1;
+    padding: 5px 15px;
 }
 
 form label {
@@ -118,6 +121,16 @@ fieldset {
     margin-bottom: 15px;
 }
 
+form .firstname-input,
+form .lastname-input {
+    width: 50%;
+    float: left;
+}
+
+form .firstname-input {
+    padding-right: 15px;
+}
+
 
 
 
@@ -127,12 +140,13 @@ section {
 
 a {
     text-decoration: none;
-    color: #292F36;
+    color: #3e3eec;
     transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 a:hover {
-    color: #CDA274;
+    color: #6b6bf6;
 }
 
 button,
