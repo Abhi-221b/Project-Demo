@@ -69,9 +69,11 @@ $('footer').append('<div id="back-to-top"><a href="#"><i class="fa fa-angle-up">
 $("#back-to-top").hide();
 $(window).scroll(function () {
     if ($(window).scrollTop() > 100) {
+        $('body').addClass('fixed')
         $("#back-to-top").fadeIn(500);
     } else {
         $("#back-to-top").fadeOut(500);
+        $('body').removeClass('fixed')
     }
 });
 //back to top
