@@ -371,6 +371,7 @@ body.show-search {
 
 footer {
     font-size: 0.875rem;
+    position: relative;
 }
 
 .footer-nav ul {
@@ -751,6 +752,29 @@ section.card-details .cards-items {
     border: 0px solid transparent;
 }
 
+div#back-to-top {
+    position: fixed;
+    right: 40px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cda274;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.35s ease-in;
+    box-shadow: 8px 0 8px 0 rgb(0 0 0 / 25%);
+}
+
+div#back-to-top:hover {
+    background-color: #cda274;
+    color: #fff;
+}
+
+div#back-to-top:hover a {
+    color: inherit;
+}
 
 @media (max-width: 991px) {
 
